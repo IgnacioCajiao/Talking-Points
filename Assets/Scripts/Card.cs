@@ -3,24 +3,26 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [System.Serializable]
-public enum CardColour
-{
-    Blue,
-    Red,
-    Green
+[CreateAssetMenu]
 
-}
+//public enum CardColour
+//{
+  //  Blue,
+ //   Red,
+ //   Green
 
-public class Card
+//}
+
+public class Card : ScriptableObject
 {
-    public string cardName;
+     public string cardName;
     [TextArea(1, 3)]
-    public string cardDesc;
+     public string cardDesc;
 
-    public Sprite cardSprite;
-    public Sprite cardBGSprite;
+     public Sprite cardSprite;
+     public Sprite cardBGSprite;
 
-    public CardColour cardColour;
+    // public CardColour cardColour;
 
 
 

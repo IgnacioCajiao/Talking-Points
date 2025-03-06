@@ -4,7 +4,5 @@ using UnityEngine;
 
 public class CardManager : MonoBehaviour
 {
-    public List<Card> cards = new List<Card>();
-
-
+  public List<Card> cards = new List<Card>();
 }
