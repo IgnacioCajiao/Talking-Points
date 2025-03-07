@@ -18,7 +18,7 @@ public class UIManager : MonoBehaviour
     {
         for (int i = 0; i < cardManager.cards.Count; i++)
         {
-            cardSlots[i].transform.GetChild[0].GetComponent.<Image>.
+            //cardSlots[i].transform.GetChild[0].GetComponent.<Image>.
         }
     }
 
