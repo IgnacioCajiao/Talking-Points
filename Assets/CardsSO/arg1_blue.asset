@@ -12,7 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7cc52c153ef44b547bf40f4ae0665fe0, type: 3}
   m_Name: arg1_blue
   m_EditorClassIdentifier: 
-  cardName: 
-  cardDesc: 
-  cardSprite: {fileID: 0}
+  cardName: Shocking Truth
+  cardDesc: When you take emissions from manufacturing into account, an EV using
+    electricity in a place like coal-dependent West Virginia will emit about six
+    per cent more greenhouse gases over its entire lifetime than a gas-powered vehicle
+    of the same size.
+  cardSprite: {fileID: 21300000, guid: c9fb879a0303a7b47af6aa666e712353, type: 3}
   cardBGSprite: {fileID: 21300000, guid: f160aee541c33f34ea68b61f5643566e, type: 3}

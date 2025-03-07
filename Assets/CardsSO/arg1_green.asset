@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7cc52c153ef44b547bf40f4ae0665fe0, type: 3}
+  m_Name: arg1_green
+  m_EditorClassIdentifier: 
+  cardName: 'Icy Irony '
+  cardDesc: "Think of the atmosphere like a sponge. Air holds about 4% more water
+    vapor for each additional degree Fahrenheit increase in temperature (that\u2019s
+    about 7% per degree Celsius). The physical law that explains this relationship
+    is known as the Clausius-Clapyron relation.\r\n"
+  cardSprite: {fileID: 21300000, guid: 3dca1e3757be7804eaa0a29832f301e9, type: 3}
+  cardBGSprite: {fileID: 0}
