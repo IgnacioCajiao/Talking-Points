@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class UIManager : MonoBehaviour
 {
 
-    public CardManager cardManager;
+    //public CardManager cardManager;
     public GameObject[] cardSlots;
 
 
@@ -16,7 +16,7 @@ public class UIManager : MonoBehaviour
     }
     private void DisplayCards()
     {
-        for (int i = 0; i < cardManager.cards.Count; i++)
+        //for (int i = 0; i < cardManager.cards.Count; i++)
         {
             //cardSlots[i].transform.GetChild[0].GetComponent.<Image>.
         }

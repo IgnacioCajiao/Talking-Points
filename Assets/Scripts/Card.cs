@@ -1,30 +1,31 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-[System.Serializable]
-[CreateAssetMenu]
-
-//public enum CardColour
-//{
-  //  Blue,
- //   Red,
- //   Green
-
-//}
-
-public class Card : ScriptableObject
+public class Card : MonoBehaviour
 {
-     public string cardName;
-    [TextArea(1, 3)]
-     public string cardDesc;
+    public BossDialogueManager bossDialogueManager; 
+    public string wrongCardDialogue; 
 
-     public Sprite cardSprite;
-     public Sprite cardBGSprite;
+    public void CorrectCard()
+    {
+        if (bossDialogueManager != null)
+        {
+            bossDialogueManager.NextTalkingPoint();
+        }
+        else
+        {
+            Debug.LogError("BossDialogueManager is not assigned!");
+        }
+    }
 
-    // public CardColour cardColour;
-
-
-
-
+    public void WrongCard()
+    {
+        if (bossDialogueManager != null)
+        {
+            bossDialogueManager.UpdateDialogue(wrongCardDialogue); 
+        }
+        else
+        {
+            Debug.LogError("BossDialogueManager is not assigned!");
+        }
+    }
 }
