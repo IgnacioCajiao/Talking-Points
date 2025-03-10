@@ -2,18 +2,17 @@ using UnityEngine;
 
 public class Card : MonoBehaviour
 {
-    public BossDialogueManager bossDialogueManager; 
-    public string wrongCardDialogue;               
-    public Sprite cardSpecificSprite;               
-    public SpriteRenderer targetSpriteRenderer;     
+    public BossDialogueManager bossDialogueManager;
+    public string wrongCardDialogue;
+    public GameObject cardPreviewPanel;
 
-    // Handles correct card logic
     public void CorrectCard()
     {
         if (bossDialogueManager != null)
         {
-            bossDialogueManager.NextTalkingPoint();  
-            bossDialogueManager.CardPlayed();        
+            bossDialogueManager.NextTalkingPoint();
+            bossDialogueManager.CardPlayed();
+            DisableCardPreview(); 
         }
         else
         {
@@ -25,8 +24,9 @@ public class Card : MonoBehaviour
     {
         if (bossDialogueManager != null)
         {
-            bossDialogueManager.UpdateDialogue(wrongCardDialogue); 
-            bossDialogueManager.CardPlayed();                      
+            bossDialogueManager.UpdateDialogue(wrongCardDialogue);
+            bossDialogueManager.CardPlayed();
+            DisableCardPreview(); 
         }
         else
         {
@@ -36,13 +36,18 @@ public class Card : MonoBehaviour
 
     public void OnCardClick()
     {
-        if (targetSpriteRenderer != null)
+        DisableCardPreview(); 
+    }
+
+    private void DisableCardPreview()
+    {
+        if (cardPreviewPanel != null)
         {
-            targetSpriteRenderer.sprite = cardSpecificSprite; 
+            cardPreviewPanel.SetActive(false); 
         }
         else
         {
-            Debug.LogError("Target SpriteRenderer is not assigned!");
+            Debug.LogError("CardPreviewPanel is not assigned!");
         }
     }
 }

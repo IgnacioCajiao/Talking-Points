@@ -48,6 +48,6 @@ public class BossDialogueManager : MonoBehaviour
 
     private void EndDialogue()
     {
-        dialogueText.text = "You big brained me!"; 
+        dialogueText.text = "You know what you had some really good points! You convinced me!"; 
     }
 }
