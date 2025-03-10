@@ -47,6 +47,7 @@ public class NPCTrigger : MonoBehaviour
     {
         if (playerInRange && dialoguePanel != null)
         {
+            Debug.Log("Dialogue panel is being activated.");
             dialoguePanel.SetActive(true); 
         }
     }

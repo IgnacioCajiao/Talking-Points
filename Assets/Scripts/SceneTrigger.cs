@@ -43,7 +43,7 @@ public class SceneTrigger : MonoBehaviour
     {
         if (playerInRange && !string.IsNullOrEmpty(sceneToLoad))
         {
-            SceneManager.LoadScene(sceneToLoad); // Load the specified scene
+            SceneManager.LoadScene(sceneToLoad); 
         }
     }
 }

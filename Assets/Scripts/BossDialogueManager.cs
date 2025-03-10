@@ -3,13 +3,15 @@ using TMPro;
 
 public class BossDialogueManager : MonoBehaviour
 {
-    public TextMeshProUGUI dialogueText; // Boss dialogue UI
-    public string[] talkingPoints;      // List of boss talking points
-    private int currentTalkingPoint = 0;
+    public TextMeshProUGUI dialogueText;  
+    public string[] talkingPoints;       
+    private int currentTalkingPoint = 0; 
+    private int cardsPlayed = 0;         
 
     public void StartDialogue()
     {
         currentTalkingPoint = 0;
+        cardsPlayed = 0; 
         ShowTalkingPoint();
     }
 
@@ -28,25 +30,24 @@ public class BossDialogueManager : MonoBehaviour
         {
             ShowTalkingPoint();
         }
-        else
+    }
+
+    public void CardPlayed()
+    {
+        cardsPlayed++;
+        if (cardsPlayed == 3)
         {
             EndDialogue();
         }
+    }
+
+    public void UpdateDialogue(string newDialogue) 
+    { 
+        dialogueText.text = newDialogue; 
     }
 
     private void EndDialogue()
     {
         dialogueText.text = "You big brained me!"; 
     }
-
-    public string GetCurrentTalkingPoint()
-    {
-        return currentTalkingPoint < talkingPoints.Length ? talkingPoints[currentTalkingPoint] : null;
-    }
-
-    public void UpdateDialogue(string newDialogue)
-    {
-        dialogueText.text = newDialogue; 
-    }
-
 }

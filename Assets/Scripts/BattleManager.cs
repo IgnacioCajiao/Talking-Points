@@ -2,16 +2,16 @@ using UnityEngine;
 
 public class BattleManager : MonoBehaviour
 {
-    public BossDialogueManager bossDialogueManager; // Handles boss dialogue
+    public BossDialogueManager bossDialogueManager; 
 
-    void Start() // Automatically called when the scene starts
+    void Start() 
     {
-        StartBattle(); // Call the battle logic here
+        StartBattle(); 
     }
 
     private void StartBattle()
     {
         Debug.Log("Battle is starting!");
-        bossDialogueManager.StartDialogue(); // Start the boss dialogue flow
+        bossDialogueManager.StartDialogue(); 
     }
 }
