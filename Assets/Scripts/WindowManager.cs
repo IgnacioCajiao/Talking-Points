@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class WindowManager : MonoBehaviour
 {
-    public List<GameObject> windows; // List of all UI windows
+    public List<GameObject> windows; 
 
     public void ShowWindow(GameObject windowToShow)
     {
@@ -11,17 +11,7 @@ public class WindowManager : MonoBehaviour
         {
             if (window != null)
             {
-                window.SetActive(window == windowToShow);
-            }
-        }
-
-        // If Codex Panel is opened, refresh its displayed cards
-        if (windowToShow.CompareTag("CodexPanel")) // Make sure your Codex UI has this tag
-        {
-            CodexDisplay codexDisplay = windowToShow.GetComponent<CodexDisplay>();
-            if (codexDisplay != null)
-            {
-                codexDisplay.DisplayCards(); // Refresh the Codex cards
+                window.SetActive(window == windowToShow); 
             }
         }
     }
@@ -32,7 +22,7 @@ public class WindowManager : MonoBehaviour
         {
             if (window != null)
             {
-                window.SetActive(false);
+                window.SetActive(false); 
             }
         }
     }

@@ -9,14 +9,4 @@ public class ButtonController : MonoBehaviour
     {
         SceneManager.LoadScene("ParkLevel");
     }
-
-    public void PlayButton()
-    {
-        SceneManager.LoadScene("ParkLevel");
-    }
-
-    public void ExitButton()
-    {
-        Application.Quit();
-    }
 }
