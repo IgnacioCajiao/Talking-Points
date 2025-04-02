@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class CodexDisplay : MonoBehaviour
 {
-    public GameObject[] allCards; // Array of all card objects in Codex Panel
+    public GameObject[] allCards; 
 
     public void DisplayCards()
     {
@@ -10,11 +10,11 @@ public class CodexDisplay : MonoBehaviour
         {
             if (CardManager.Instance.collectedCardNames.Contains(card.name))
             {
-                card.SetActive(true); // Enable only collected cards
+                card.SetActive(true); 
             }
             else
             {
-                card.SetActive(false); // Keep others hidden
+                card.SetActive(false); 
             }
         }
     }

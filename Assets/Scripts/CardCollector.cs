@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class CardCollector : MonoBehaviour
 {
-    public string cardName; // Assign card name in Inspector
+    public string cardName; 
     private bool playerInRange = false;
 
     void Update()

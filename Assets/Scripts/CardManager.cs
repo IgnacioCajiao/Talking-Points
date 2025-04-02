@@ -4,7 +4,7 @@ using UnityEngine;
 public class CardManager : MonoBehaviour
 {
     public static CardManager Instance;
-    public List<string> collectedCardNames = new List<string>(); // Store card names
+    public List<string> collectedCardNames = new List<string>(); 
 
     void Awake()
     {
@@ -21,7 +21,7 @@ public class CardManager : MonoBehaviour
 
     public void AddCard(string cardName)
     {
-        if (!collectedCardNames.Contains(cardName)) // Prevent duplicates
+        if (!collectedCardNames.Contains(cardName)) 
         {
             collectedCardNames.Add(cardName);
         }

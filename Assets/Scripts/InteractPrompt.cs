@@ -2,20 +2,20 @@ using UnityEngine;
 
 public class InteractPrompt : MonoBehaviour
 {
-    public GameObject interactText; // UI Text that says "Press E to Interact"
-    public GameObject imagePanel;  // Panel that will display the image
+    public GameObject interactText; 
+    public GameObject imagePanel;  
     private bool playerInRange = false;
 
     void Start()
     {
         if (interactText != null)
         {
-            interactText.SetActive(false); // Hide prompt initially
+            interactText.SetActive(false); 
         }
 
         if (imagePanel != null)
         {
-            imagePanel.SetActive(false); // Hide image panel initially
+            imagePanel.SetActive(false); 
         }
     }
 
@@ -34,7 +34,7 @@ public class InteractPrompt : MonoBehaviour
             playerInRange = true;
             if (interactText != null)
             {
-                interactText.SetActive(true); // Show "Press E to Interact"
+                interactText.SetActive(true); 
             }
         }
     }
@@ -46,12 +46,12 @@ public class InteractPrompt : MonoBehaviour
             playerInRange = false;
             if (interactText != null)
             {
-                interactText.SetActive(false); // Hide text when player leaves
+                interactText.SetActive(false); 
             }
 
             if (imagePanel != null)
             {
-                imagePanel.SetActive(false); // Hide image panel when player leaves
+                imagePanel.SetActive(false); 
             }
         }
     }
@@ -60,7 +60,7 @@ public class InteractPrompt : MonoBehaviour
     {
         if (imagePanel != null)
         {
-            imagePanel.SetActive(!imagePanel.activeSelf); // Toggle visibility
+            imagePanel.SetActive(!imagePanel.activeSelf); 
         }
     }
 }
