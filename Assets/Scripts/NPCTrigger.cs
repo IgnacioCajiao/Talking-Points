@@ -2,33 +2,41 @@ using UnityEngine;
 
 public class NPCTrigger : MonoBehaviour
 {
-    public GameObject talkButton; 
-    public GameObject dialoguePanel; 
-    private bool playerInRange = false; 
+    public GameObject talkButton;
+    public GameObject dialoguePanel;
+    private bool playerInRange = false;
 
     void Start()
     {
         if (talkButton != null)
         {
-            talkButton.SetActive(false); 
+            talkButton.SetActive(false);
+        }
+    }
+
+    void Update()
+    {
+        if (playerInRange && Input.GetKeyDown(KeyCode.E))
+        {
+            ShowDialogue();
         }
     }
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("Player")) 
+        if (other.CompareTag("Player"))
         {
             playerInRange = true;
             if (talkButton != null)
             {
-                talkButton.SetActive(true); 
+                talkButton.SetActive(true);
             }
         }
     }
 
     void OnTriggerExit2D(Collider2D other)
     {
-        if (other.CompareTag("Player")) 
+        if (other.CompareTag("Player"))
         {
             playerInRange = false;
             if (talkButton != null)
@@ -38,17 +46,17 @@ public class NPCTrigger : MonoBehaviour
 
             if (dialoguePanel != null)
             {
-                dialoguePanel.SetActive(false); 
+                dialoguePanel.SetActive(false);
             }
         }
     }
 
     public void ShowDialogue()
     {
-        if (playerInRange && dialoguePanel != null)
+        if (dialoguePanel != null)
         {
             Debug.Log("Dialogue panel is being activated.");
-            dialoguePanel.SetActive(true); 
+            dialoguePanel.SetActive(true);
         }
     }
 }
