@@ -1,14 +1,23 @@
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
+using UnityEngine.EventSystems; 
 using System.Collections.Generic;
 
 public class DialogueBattleManager : MonoBehaviour
 {
     public TMP_Text promptText; 
     public TMP_Text responseText; 
-    public GameObject cardSelectionPanel; 
+    public GameObject cardSelectionPanel;
     public GameObject continueButton; 
+
+    public SpriteRenderer enemySpriteRenderer; 
+    public Sprite neutralSprite; 
+    public Sprite correctResponseSprite; 
+    public Sprite incorrectResponseSprite; 
+
+    public GameObject hoverCardPanel; 
+    public Image hoverCardImage; 
 
     public List<DialoguePromptSO> prompts; 
     private int currentPromptIndex = 0;
@@ -30,6 +39,8 @@ public class DialogueBattleManager : MonoBehaviour
             responseText.text = "";
             responseText.gameObject.SetActive(false);
 
+            enemySpriteRenderer.sprite = neutralSprite;
+
             foreach (Button card in cardSelectionPanel.GetComponentsInChildren<Button>())
             {
                 card.interactable = true; 
@@ -49,12 +60,30 @@ public class DialogueBattleManager : MonoBehaviour
 
         promptText.gameObject.SetActive(false);
 
-        responseText.text = (cardName == prompt.correctCardName) ? prompt.correctCardSelected : prompt.incorrectCardSelected;
+        if (cardName == prompt.correctCardName)
+        {
+            responseText.text = prompt.correctCardSelected;
+            enemySpriteRenderer.sprite = correctResponseSprite; 
+
+            foreach (Button card in cardSelectionPanel.GetComponentsInChildren<Button>())
+            {
+                if (card.name == cardName) 
+                {
+                    card.gameObject.SetActive(false); 
+                }
+            }
+        }
+        else
+        {
+            responseText.text = prompt.incorrectCardSelected;
+            enemySpriteRenderer.sprite = incorrectResponseSprite; 
+        }
+
         responseText.gameObject.SetActive(true);
 
         foreach (Button card in cardSelectionPanel.GetComponentsInChildren<Button>())
         {
-            card.interactable = false; 
+            card.interactable = false;
         }
 
         continueButton.SetActive(true); 
@@ -68,9 +97,28 @@ public class DialogueBattleManager : MonoBehaviour
 
     void EndBattle()
     {
+
+        promptText.gameObject.SetActive(true);
+        responseText.gameObject.SetActive(true);
+
         promptText.text = "You've successfully countered all arguments!";
-        responseText.text = "";
-        cardSelectionPanel.SetActive(false); 
-        continueButton.SetActive(false); 
+        responseText.text = ""; 
+
+        cardSelectionPanel.SetActive(false);
+
+        continueButton.SetActive(false);
+
+        enemySpriteRenderer.sprite = neutralSprite;
+    }
+
+    public void OnCardHover(Sprite largeCardSprite)
+    {
+        hoverCardImage.sprite = largeCardSprite; 
+        hoverCardPanel.SetActive(true); 
+    }
+
+    public void OnCardExit()
+    {
+        hoverCardPanel.SetActive(false); 
     }
 }
