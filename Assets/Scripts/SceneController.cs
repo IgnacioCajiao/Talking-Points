@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -10,7 +8,7 @@ public class ButtonController : MonoBehaviour
         SceneManager.LoadScene("ParkLevel");
     }
 
-    public void PlayButton()
+    public void NextButtonToLevel()
     {
         SceneManager.LoadScene("ParkLevel");
     }
@@ -18,5 +16,20 @@ public class ButtonController : MonoBehaviour
     public void ExitButton()
     {
         Application.Quit();
+    }
+
+    public void PlayButton()
+    {
+        SceneManager.LoadScene("TitleInstructions");
+    }
+
+    public void NextButtonToCredits()
+    {
+        SceneManager.LoadScene("Credits");
+    }
+
+    public void NextButtonToBattle()
+    {
+        SceneManager.LoadScene("ParkBattle");
     }
 }

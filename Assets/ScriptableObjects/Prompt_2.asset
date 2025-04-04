@@ -12,7 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 310f9bb93c27a2e468e17cda74f1b60c, type: 3}
   m_Name: Prompt_2
   m_EditorClassIdentifier: 
-  PromptDialogue: chem trails are real
-  correctCardName: MiniCardEarth
-  correctCardSelected: ya im dumb
-  incorrectCardSelected: ur dumb
+  PromptDialogue: Oh, come on! If climate change was real, why do we still have record
+    snowfalls? If the planet's getting hotter, shouldn't everything be melting?
+  correctCardName: IcyIrony
+  correctCardSelected: "Alright, I see your point now. Warmer air holds more moisture,
+    huh? I guess that makes sense. Didn't think of it that way. I\u2019ll admit,
+    maybe there\u2019s more to this than I thought."
+  incorrectCardSelected: "That doesn't make sense at all. You clearly don\u2019t
+    understand how all of this really works."

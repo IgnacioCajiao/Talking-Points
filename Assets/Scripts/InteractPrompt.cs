@@ -48,11 +48,6 @@ public class InteractPrompt : MonoBehaviour
             {
                 interactText.SetActive(false); 
             }
-
-            if (imagePanel != null)
-            {
-                imagePanel.SetActive(false); 
-            }
         }
     }
 

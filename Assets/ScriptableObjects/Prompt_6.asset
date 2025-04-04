@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 310f9bb93c27a2e468e17cda74f1b60c, type: 3}
+  m_Name: Prompt_6
+  m_EditorClassIdentifier: 
+  PromptDialogue: "Agh, back in the day, almost everything was made through factories
+    powered by coal, and we\u2019d even drive without seatbelts, and somehow survived.
+    This whole \u201CClimate Change\u201D Shenanigans is just another excuse to make
+    everyone soft and spend more."
+  correctCardName: ChangeOrRegret
+  correctCardSelected: "You know what? That actually makes sense. People have always
+    adapted to problems, so maybe tackling climate change is just another step forward.
+    I guess resisting change doesn\u2019t really help anyone."
+  incorrectCardSelected: "That doesn't make sense at all. You clearly don\u2019t
+    understand how all of this really works."

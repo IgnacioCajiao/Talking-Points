@@ -9,9 +9,21 @@ EditorBuildSettings:
     path: Assets/Scenes/StartScreen.unity
     guid: f776491c50535524bafcee4a3ae62ea2
   - enabled: 1
+    path: Assets/Scenes/TitleInstructions.unity
+    guid: a45d4527786e0f8468b63bb2d358d765
+  - enabled: 1
     path: Assets/Scenes/ParkLevel.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
+    path: Assets/Scenes/BattleInstructions.unity
+    guid: 1165fc66c3bc86e4087aead1066fb7c9
+  - enabled: 1
     path: Assets/Scenes/ParkBattle.unity
     guid: 807fc1a27e4968f42bd3c64f51059768
+  - enabled: 1
+    path: Assets/Scenes/WinScreen.unity
+    guid: 97f9b6b173fca7945b9fa4ea4ca736b0
+  - enabled: 1
+    path: Assets/Scenes/Credits.unity
+    guid: 465dbee020e083446ab11dfe9426bfa1
   m_configObjects: {}

@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 310f9bb93c27a2e468e17cda74f1b60c, type: 3}
+  m_Name: Prompt_4
+  m_EditorClassIdentifier: 
+  PromptDialogue: "I\u2019m not sure if your \u201Cgovernment\u201D sponsored school
+    taught you that plants actually need CO2 to grow, so how come having more is
+    bad?? You\u2019re saying we should starve our plants?"
+  correctCardName: CO2Overdose
+  correctCardSelected: "Huh\u2026 I never thought about it like that. I guess even
+    good things can have a limit. If too much CO2 messes with the climate and hurts
+    crops, that\u2019s definitely not helping plants after all."
+  incorrectCardSelected: "That doesn't make sense at all. You clearly don\u2019t
+    understand how all of this really works."

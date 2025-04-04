@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 310f9bb93c27a2e468e17cda74f1b60c, type: 3}
+  m_Name: Prompt_7
+  m_EditorClassIdentifier: 
+  PromptDialogue: "If climate change is such a big deal, why are so many countries
+    still relying on fossil fuels? Shouldn\u2019t they be switching to clean energy
+    by now if it's really that urgent?"
+  correctCardName: EnergyInertia
+  correctCardSelected: "Okay, okay, you got me. I\u2019ll have to look into this
+    more."
+  incorrectCardSelected: "Ha! Nice try, but you\u2019re mistaken. Those so-called
+    'facts' you're quoting don't line up with what I\u2019ve researched."

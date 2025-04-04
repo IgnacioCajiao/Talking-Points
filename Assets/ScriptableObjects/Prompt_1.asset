@@ -12,7 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 310f9bb93c27a2e468e17cda74f1b60c, type: 3}
   m_Name: Prompt_1
   m_EditorClassIdentifier: 
-  PromptDialogue: climate change is fake
-  correctCardName: MiniCardElect
-  correctCardSelected: Ya im dumb
-  incorrectCardSelected: ur dumb
+  PromptDialogue: Hey, I hear you've been looking for me and you want to talk about
+    climate change? Well, listen up kid, climate change is just a hoax cooked up
+    by the government to control us. The planet's always had hot and cold cycles.
+    It's just nature doing its thing!
+  correctCardName: BurningTruth
+  correctCardSelected: "Alright, alright, you\u2019ve got your facts, I\u2019ll give
+    you that. Maybe there\u2019s more to it than I thought."
+  incorrectCardSelected: "Ha! Nice try, but you\u2019re mistaken. Those so-called
+    'facts' you're quoting don't line up with what I\u2019ve researched."

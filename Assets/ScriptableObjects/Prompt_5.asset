@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 310f9bb93c27a2e468e17cda74f1b60c, type: 3}
+  m_Name: Prompt_5
+  m_EditorClassIdentifier: 
+  PromptDialogue: "Oh yeah? Electric Cars are so great right? Do you even know where
+    electricity comes from? Burning fossil fuel! Checkmate tree-hugger, I\u2019d
+    rather drive my truck, Electric Car companies just want me to spend more money
+    and make them rich."
+  correctCardName: ShockingTruth
+  correctCardSelected: "Hmm\u2026 I guess I never really thought about how the energy
+    grid is changing. If we\u2019re moving toward more wind and solar, then electric
+    cars could actually make a difference. Maybe they\u2019re not as bad as I thought."
+  incorrectCardSelected: "That doesn't make sense at all. You clearly don\u2019t
+    understand how all of this really works."

@@ -11,6 +11,7 @@ public class DialogueBattleManager : MonoBehaviour
     public TMP_Text responseText;
     public GameObject cardSelectionPanel;
     public GameObject continueButton;
+    public GameObject endButton;
 
     public SpriteRenderer enemySpriteRenderer;
     public Sprite neutralSprite;
@@ -32,6 +33,7 @@ public class DialogueBattleManager : MonoBehaviour
     void Start()
     {
         ShowNextPrompt();
+        endButton.SetActive(false);
     }
 
     void ShowNextPrompt()
@@ -58,6 +60,7 @@ public class DialogueBattleManager : MonoBehaviour
         else
         {
             EndBattle();
+            endButton.SetActive(true);
         }
     }
 
@@ -113,13 +116,17 @@ public class DialogueBattleManager : MonoBehaviour
         currentPromptIndex++;
         ShowNextPrompt();
     }
+    public void OnEndButtonClicked()
+    {
+        SceneManager.LoadScene("WinScreen");
+    }
 
     void EndBattle()
     {
         promptText.gameObject.SetActive(true);
         responseText.gameObject.SetActive(true);
 
-        promptText.text = "You've successfully countered all arguments!";
+        promptText.text = "You know what, your brain is actually huge. Thanks for informing me on these important topics!";
         responseText.text = "";
 
         cardSelectionPanel.SetActive(false);
@@ -131,13 +138,13 @@ public class DialogueBattleManager : MonoBehaviour
     void ShowLoseMessage()
     {
         promptText.gameObject.SetActive(true);
-        promptText.text = "Misinformation reached full! You lost!";
+        promptText.text = "My Misinformation is more POWERFULL AHAHA! YOU LOSE!";
 
         responseText.gameObject.SetActive(false);
         cardSelectionPanel.SetActive(false);
         continueButton.SetActive(false);
 
-        Invoke("RestartScene", 3f);
+        Invoke("RestartScene", 5f);
     }
 
     void RestartScene()
