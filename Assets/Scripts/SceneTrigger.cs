@@ -85,9 +85,9 @@ public class SceneTrigger : MonoBehaviour
 
     public void LoadScene()
     {
-        if (playerInRange && canTalk && !string.IsNullOrEmpty(sceneToLoad))
+        if (playerInRange && canTalk && !string.IsNullOrEmpty("BattleInstructions"))
         {
-            SceneManager.LoadScene(sceneToLoad);
+            SceneManager.LoadScene("BattleInstructions");
         }
     }
 }
