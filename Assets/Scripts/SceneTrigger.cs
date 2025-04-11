@@ -1,6 +1,6 @@
 using UnityEngine;
-using UnityEngine.SceneManagement;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class SceneTrigger : MonoBehaviour
 {
@@ -10,7 +10,12 @@ public class SceneTrigger : MonoBehaviour
 
     private bool playerInRange = false;
     private bool canTalk = false;
-    private int collectedCards = 0;
+    private static int collectedCards = 0; 
+
+    void Awake()
+    {
+        DontDestroyOnLoad(gameObject); 
+    }
 
     void Start()
     {
@@ -19,10 +24,7 @@ public class SceneTrigger : MonoBehaviour
             BattleButton.SetActive(false);
         }
 
-        if (buttonText != null)
-        {
-            buttonText.text = "Cards collected 0/9";
-        }
+        UpdateButtonText();
     }
 
     void Update()
