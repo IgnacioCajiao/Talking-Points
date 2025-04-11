@@ -76,7 +76,7 @@ public class DialogueBattleManager : MonoBehaviour
             enemySpriteRenderer.sprite = correctResponseSprite;
 
             correctSelections++;
-            infoSlider.value = (float)correctSelections / 9f;
+            infoSlider.value = (float)correctSelections / (9 - incorrectSelections);
 
             foreach (Button card in cardSelectionPanel.GetComponentsInChildren<Button>())
             {
@@ -126,7 +126,7 @@ public class DialogueBattleManager : MonoBehaviour
         promptText.gameObject.SetActive(true);
         responseText.gameObject.SetActive(true);
 
-        promptText.text = "You know what, your brain is actually huge. Thanks for informing me on these important topics!";
+        promptText.text = "Alright... maybe I was wrong. The facts actually make sense. You’ve given me a lot to think about, thanks for opening my eyes.";
         responseText.text = "";
 
         cardSelectionPanel.SetActive(false);
@@ -138,7 +138,7 @@ public class DialogueBattleManager : MonoBehaviour
     void ShowLoseMessage()
     {
         promptText.gameObject.SetActive(true);
-        promptText.text = "My Misinformation is more POWERFULL AHAHA! YOU LOSE!";
+        promptText.text = "Ha! See? Your so called ‘facts’ don’t hold up. Climate change? Just another hoax! You lose!";
 
         responseText.gameObject.SetActive(false);
         cardSelectionPanel.SetActive(false);
